@@ -25,7 +25,32 @@ Landing Kit 是一组面向陌生软件仓库的 AI Skills，帮助开发者建�
 
 ### Codex
 
-当前仓库包含 Codex 兼容清单 `.codex-plugin/plugin.json`。开发阶段可按照 Codex 官方的本地插件/个人 marketplace 流程把本仓库作为插件源；发布 marketplace 前，不宣称可以用公共名称直接安装。
+在 Codex CLI 中添加 Landing Kit marketplace：
+
+```bash
+codex plugin marketplace add LavaCourage07/landing-kit
+```
+
+然后安装插件：
+
+```bash
+codex plugin add landing-kit@landing-kit
+```
+
+安装完成后请启动一个新的 Codex 会话，让六个 Skill 被重新发现。可以用下面的提示验证：
+
+```text
+Use $landing-scan to help me get oriented in this repository.
+```
+
+更新到仓库发布的新版本：
+
+```bash
+codex plugin marketplace upgrade landing-kit
+codex plugin add landing-kit@landing-kit
+```
+
+这是一条由 GitHub 仓库提供的 marketplace 分发路径，不代表 Landing Kit 已进入 ChatGPT/Codex 公共插件目录。
 
 若只需在某个仓库试用，也可以把 `skills/landing-*` 复制或链接到该仓库的 `.agents/skills/`，然后启动一个新会话确认六个 Skill 的名称与描述已被发现。不同 Codex 客户端的插件入口可能不同，请以当前官方文档为准。
 

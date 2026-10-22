@@ -14,10 +14,13 @@ Last updated: 2026-10-22
 - Added a repository validator for structure, metadata, references, and manifests.
 - Completed a developer self-scan with a source-linked Mermaid fallback and an honest conditional-pass result.
 - Passed local Claude Code plugin validation; the validator reported non-blocking marketplace icon and unpublished-install-line advice.
+- Added a Git-backed Codex marketplace catalog and exact CLI installation instructions.
+- Installed `landing-kit@landing-kit` through Codex, verified version `0.1.0` and all six cached Skills, then removed the temporary test installation.
 
 ## Known limits
 
-- This checkout has not yet been installed through a published Codex or Claude marketplace.
+- Landing Kit is distributed through its GitHub Codex marketplace, not yet through the universal public Plugins Directory.
+- Claude Code has a compatible plugin manifest but no published Claude marketplace catalog in v0.1.0.
 - No marketplace icon is included in v0.1.0 because no brand asset has been selected.
 - Archify and Superpowers are not bundled; their end-to-end integrations still require host-level installation tests.
 - Multi-stack evaluation prompts are defined, but results from independent real repositories are not yet recorded.

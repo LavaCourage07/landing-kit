@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "description": "Evidence-backed skills for understanding, changing, verifying, and documenting unfamiliar codebases.",
   "author": {
-    "name": "Landing Kit contributors"
+    "name": "LavaCourage07",
+    "url": "https://github.com/LavaCourage07"
   },
   "homepage": "https://github.com/LavaCourage07/landing-kit",
   "repository": "https://github.com/LavaCourage07/landing-kit",
@@ -14,7 +15,7 @@
     "displayName": "Landing Kit",
     "shortDescription": "Get oriented and change unfamiliar codebases safely.",
     "longDescription": "Scan and map an unfamiliar repository, trace behavior, implement focused changes, verify outcomes, and preserve confirmed knowledge.",
-    "developerName": "Landing Kit contributors",
+    "developerName": "LavaCourage07",
     "category": "Developer Tools",
     "capabilities": ["Interactive", "Read", "Write"],
     "websiteURL": "https://github.com/LavaCourage07/landing-kit",

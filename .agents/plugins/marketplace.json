@@ -1,0 +1,21 @@
+{
+  "name": "landing-kit",
+  "interface": {
+    "displayName": "Landing Kit"
+  },
+  "plugins": [
+    {
+      "name": "landing-kit",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/LavaCourage07/landing-kit.git",
+        "ref": "main"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

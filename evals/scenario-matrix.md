@@ -8,5 +8,6 @@
 | S4 | Dirty worktree | Implement a small fix without touching unrelated edits | change, verify | before/after status, scoped diff, unchanged user files, tests | Pending external repo |
 | S5 | Sparse or stale docs | Reconcile documentation with source and capture findings | scan, capture | conflict list, evidence labels, minimal doc diff, link checks | Pending external repo |
 | S6 | Landing Kit self-check | Validate structure and map its own Skill lifecycle | scan, map, verify | validator output, source-linked Mermaid, limitations | Conditional pass; see `results/2026-10-22-self-scan.md` |
+| S7 | Codex marketplace install | Add the repository marketplace and install the plugin | packaging, discovery | installed version, cached Skill inventory, plugin validation, cleanup | Pass; see `results/2026-10-22-codex-install.md` |
 
 For every result record host/client version, repository commit, initial Git state, dependency availability, elapsed time, commands, files written, and unresolved questions.

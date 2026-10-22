@@ -98,6 +98,31 @@ def validate_manifests(failures: list[str]) -> None:
     if codex.get("skills") != "./skills/":
         error("Codex compatibility manifest does not declare ./skills/", failures)
 
+    marketplace_path = ROOT / ".agents" / "plugins" / "marketplace.json"
+    try:
+        marketplace = json.loads(marketplace_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        error(f"cannot parse .agents/plugins/marketplace.json: {exc}", failures)
+        return
+    if marketplace.get("name") != "landing-kit":
+        error("marketplace name must be landing-kit", failures)
+    entries = marketplace.get("plugins", [])
+    if len(entries) != 1 or entries[0].get("name") != "landing-kit":
+        error("marketplace must expose exactly one landing-kit plugin", failures)
+        return
+    entry = entries[0]
+    expected_source = {
+        "source": "url",
+        "url": "https://github.com/LavaCourage07/landing-kit.git",
+        "ref": "main",
+    }
+    if entry.get("source") != expected_source:
+        error("marketplace source must point at the landing-kit repository main branch", failures)
+    if entry.get("policy") != {"installation": "AVAILABLE", "authentication": "ON_INSTALL"}:
+        error("marketplace policy is incomplete or unexpected", failures)
+    if entry.get("category") != "Developer Tools":
+        error("marketplace category must be Developer Tools", failures)
+
 
 def validate_references(failures: list[str]) -> None:
     required = {
@@ -113,6 +138,7 @@ def validate_references(failures: list[str]) -> None:
         "DEVELOPMENT.md",
         "STATUS.md",
         "LICENSE",
+        ".agents/plugins/marketplace.json",
     }
     for relative in sorted(required):
         if not (ROOT / relative).is_file():
@@ -132,7 +158,7 @@ def main() -> int:
     if failures:
         print(f"\nValidation failed with {len(failures)} issue(s).")
         return 1
-    print("PASS: six skills, shared references, evals, and three plugin manifests are structurally valid.")
+    print("PASS: six skills, shared references, evals, three plugin manifests, and the Codex marketplace are structurally valid.")
     print("NOTE: static validation does not prove host discovery, runtime behavior, or visual quality.")
     return 0
 
