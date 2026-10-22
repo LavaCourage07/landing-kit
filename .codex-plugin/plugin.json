@@ -1,0 +1,27 @@
+{
+  "name": "landing-kit",
+  "version": "0.1.0",
+  "description": "Evidence-backed skills for understanding, changing, verifying, and documenting unfamiliar codebases.",
+  "author": {
+    "name": "Landing Kit contributors"
+  },
+  "homepage": "https://github.com/LavaCourage07/landing-kit",
+  "repository": "https://github.com/LavaCourage07/landing-kit",
+  "license": "MIT",
+  "keywords": ["codebase", "onboarding", "architecture", "verification"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Landing Kit",
+    "shortDescription": "Get oriented and change unfamiliar codebases safely.",
+    "longDescription": "Scan and map an unfamiliar repository, trace behavior, implement focused changes, verify outcomes, and preserve confirmed knowledge.",
+    "developerName": "Landing Kit contributors",
+    "category": "Developer Tools",
+    "capabilities": ["Interactive", "Read", "Write"],
+    "websiteURL": "https://github.com/LavaCourage07/landing-kit",
+    "defaultPrompt": [
+      "Help me understand this unfamiliar codebase.",
+      "Trace this behavior before I change it.",
+      "Verify this implementation against its acceptance criteria."
+    ]
+  }
+}

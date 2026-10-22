@@ -1,0 +1,4 @@
+interface:
+  display_name: "Landing Trace"
+  short_description: "Trace behavior through code, data, errors, and dependencies"
+  default_prompt: "Use $landing-trace to trace this behavior through the codebase."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Landing Verify"
+  short_description: "Verify changes against criteria with concrete evidence"
+  default_prompt: "Use $landing-verify to verify this change and report the remaining risk."

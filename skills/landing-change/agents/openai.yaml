@@ -1,0 +1,4 @@
+interface:
+  display_name: "Landing Change"
+  short_description: "Plan and implement focused changes without losing existing work"
+  default_prompt: "Use $landing-change to implement this change safely in the current repository."

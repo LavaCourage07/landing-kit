@@ -1,0 +1,4 @@
+interface:
+  display_name: "Landing Map"
+  short_description: "Create evidence-backed architecture and codebase maps"
+  default_prompt: "Use $landing-map to create an evidence-backed visual map of this codebase."

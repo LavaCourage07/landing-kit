@@ -1,0 +1,4 @@
+interface:
+  display_name: "Landing Capture"
+  short_description: "Capture verified project knowledge without duplication"
+  default_prompt: "Use $landing-capture to preserve the project knowledge confirmed in this work."

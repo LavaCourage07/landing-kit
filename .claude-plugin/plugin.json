@@ -1,0 +1,12 @@
+{
+  "name": "landing-kit",
+  "version": "0.1.0",
+  "description": "Evidence-backed skills for understanding, changing, verifying, and documenting unfamiliar codebases.",
+  "author": {
+    "name": "Landing Kit contributors"
+  },
+  "homepage": "https://github.com/LavaCourage07/landing-kit",
+  "repository": "https://github.com/LavaCourage07/landing-kit",
+  "license": "MIT",
+  "keywords": ["codebase", "onboarding", "architecture", "verification"]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Landing Scan"
+  short_description: "Inspect repositories and build evidence-backed overviews"
+  default_prompt: "Use $landing-scan to inspect this repository and create a verified project overview."
